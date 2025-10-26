@@ -59,7 +59,7 @@ let result = $().class('bg-[#CCC]').slot([
         // code compare
         $().class('my-5 font-bold text-[16px]').slot('code compare'),
         $('pre').class('overflow-auto shadow-lg mb-5 text-[13px] bg-[#EEE] p-5').slot(`
-        <span class="text-[green]">// 🟢 It's new way to build html, and you can create reuse-components and bind events easily</span>
+        <span class="text-[green]">// 🟢 It's a new way to build html, and you can create reuse-components or bind events on html elements easily</span>
         import $, { utils } from './$.js'
         let navButton = (label) => $().class('hover:bg-[#DDD] px-2 cursor-pointer rounded-sm').slot(label)
         let builder = $().slot([
@@ -73,7 +73,7 @@ let result = $().class('bg-[#CCC]').slot([
         ids.navB.tag().onclick=()=> alert('test clicked') <span class="text-[green]">// easily add event</span>
         `.trim().replaceAll('        ','')),
         $('pre').class('overflow-auto shadow-lg mb-5 text-[13px] bg-[#EEE] p-5').slot(`
-        <span class="text-[green]">// 🟠 old approach 1, only support component that bulid with string & it's not easy to add events on elements</span>
+        <span class="text-[green]">// 🟠 old approach 1, only support the component that bulid with string & it's not easy to add events on elements</span>
         let navButton2 = (label) => \`&lt;div class="hover:bg-[#DDD] px-2 cursor-pointer rounded-sm"&gt;\${label}&lt;/div&gt;\`
         document.body.innerHTML = \`
         &lt;div&gt;
@@ -107,7 +107,7 @@ let result = $().class('bg-[#CCC]').slot([
         // API
         $().class('my-5 font-bold text-[16px]').slot('API list'),
         $().slot('$() : create div tag, and return builder instance. $(\'p\') / $(\'span\') / $(\'footer\')'),
-        $().slot('$().slot(content) : the content can be string or builder instance array'),
+        $().slot('$().slot(content) : the content can be a string or a builder instance array'),
         $().slot('$().class(cssClasses) : css classes'),
         $().slot('$().style(cssStyles) : css styles'),
         $().slot('$().id(id) : set id'),
