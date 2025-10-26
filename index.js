@@ -120,7 +120,7 @@ let result = $().class('bg-[#CCC]').slot([
 
 // find all ids and assign event
 let ids = utils.getIds(result)
-// console.log(ids) // {home: Base, demo: Base, main: Base}
+// console.log(ids) // {home: Builder, demo: Builder, main: Builder}
 ids.home.tag().onclick=()=> alert('home button')
 ids.demo.tag().onclick=()=> alert('demo button')
 
